@@ -1,0 +1,22 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #362214, #aaaa83); /* Dark Brown to Milky Chocolate */
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    color: #F5F5DC; /* Beige text */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

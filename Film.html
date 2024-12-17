@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Общая информация</title>
+<style>
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #362214, #aaaa83); /* Dark Brown to Milky Chocolate */
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    color: #f5f5dc; /* Молочный цвет */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+    padding: 10px 0; /* Сохраняем отступ сверху и снизу */
+    color: #f5f5dc; /* Молочный цвет */
+    background: none; /* Убираем фон */
+}
+
+a {
+    color: #f5f5dc; /* Молочный цвет */
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3); /* Полупрозрачный тёмный фон для ссылок */
+    border: none;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Темнее при наведении */
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: #f5f5dc; /* Молочный цвет */
+    background-color: rgba(255, 255, 255, 0.1); /* Слегка светлый фон таблицы */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.1); /* Слегка тёмный фон для заголовков столбцов */
+}
+
+img {
+    max-width: 170px;
+    height: auto;
+}
+</style>
+</head>
+<body>
+    <h2>
+        <a href="Index.html">Главная</a> |
+        <a href="Info.html">Общая информация</a> |
+        <a href="history.html">История</a> |
+        <a href="film.html">Фильмография</a> |
+        <a href="disc.html">Дискография</a> |
+        <a href="links.html">Источники</a> |
+        <a href="Shop.html">Магазин</a> |
+        <a href="Contact.html">Контакты</a>
+    </h2>
+
+    <table>
+        <tr>
+            <th>Год</th>
+            <th>Русское название</th>
+            <th>Оригинальное название</th>
+            <th>Афиша</th>
+            <th>Примечание</th>
+        </tr>
+        <tr>
+            <td>2013</td>
+            <td>Хоть раз в жизни</td>
+            <td>Begin Again</td>
+            <td><img src="Film1.jpg" alt="Афиша фильма"></td>
+            <td>Х/ф</td>
+        </tr>
+    </table>
+</body>
+</html>

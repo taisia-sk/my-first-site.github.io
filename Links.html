@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Maroon 5</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            text-align: center;
+            background: linear-gradient(90deg, #362214, #aaaa83);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #F5F5DC;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #f5f5dc; /* Beige headings */
+            margin-bottom: 10px;
+        }
+
+        h1 em { font-style: italic; }
+
+        .nav-links { margin-bottom: 20px; }
+
+        .nav-links a {
+            color: #f5f5dc; /* Beige links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .sources {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .source-item {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: #8b4513; /* Brown background */ /* Added this line */
+            color: #f5f5dc;          /* Beige text color */ /* Added this line */
+        }
+
+        .source-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .source-item a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links img {
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        hr {
+            width: 50%;
+            margin: 20px auto;
+            border-top: 3px solid black;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="Index.html">Главная</a> |
+        <a href="Info.html">Общая информация</a> |
+        <a href="history.html">История</a> |
+		<a href="film.html">Фильмография</a> |
+        <a href="disc.html">Дискография</a> |
+        <a href="links.html">Источники</a> |
+        <a href="Shop.html">Магазин</a> |
+        <a href="Contact.html">Контакты</a>
+    </div>
+    <h1><em>Контакты</em></h1>
+    <div class="sources">
+        <h2>Список источников</h2>
+        <div class="source-item">
+            <strong>Название:</strong> "Официальный сайт MAROON 5"<br>
+            <strong>Ссылка:</strong> <a href="https://www.maroon5.com/" target="_blank">https://www.maroon5.com/</a><br>
+            <strong>Описание:</strong> "Основная информация о музыкальной группе, ее деятельности и ближайших концертах."
+        </div>
+        <div class="source-item">
+            <strong>Название:</strong> "Статья в Wikipedia"<br>
+            <strong>Ссылка:</strong> <a href="https://ru.wikipedia.org/wiki/Maroon_5" target="_blank">https://ru.wikipedia.org/wiki/Maroon_5</a><br>
+            <strong>Описание:</strong> "Подробная биография участников группы и описание их музыкальной карьеры."
+        </div>
+        <div class="source-item">
+            <strong>Название:</strong> "MAROON 5 Interview | News | MTV"<br>
+            <strong>Ссылка:</strong> <a href="https://www.mtv.co.uk/news/6liyxi/maroon-5-interview" target="_blank">https://www.mtv.co.uk/news/6liyxi/maroon-5-interview</a><br>
+            <strong>Описание:</strong> "Эксклюзивное интервью с солистом группы о творчестве и планах."
+        </div>
+    </div>
+    <div class="social-links">
+        <h3>Мы в социальных сетях:</h3>
+        <a href="https://t.me/ZvezdichevOfficialbot"><img src="tg.png" alt="Telegram"></a>
+    </div>
+    <h1>Карта с определенной геолокацией</h1>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([34.055863, -118.246139], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        var marker = L.marker([34.055863, -118.246139]).addTo(map);
+        marker.bindPopup('Лос-Анджелес').openPopup();
+    </script>
+
+    <hr>
+    <footer>&copy; Все права защищены.</footer>
+</body>
+</html>
